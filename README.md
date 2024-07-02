@@ -40,4 +40,5 @@ jobs:
         run: |
             echo "something random"                 // HOW TO reuse this block
             echo "hello there"                      //
+                                                    // ALSO : usage of secrets here
 ```
