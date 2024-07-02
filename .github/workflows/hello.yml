@@ -1,4 +1,4 @@
-name: HEllo World! 
+name: Hello World! 
 
 on: 
   push:
@@ -21,3 +21,5 @@ jobs:
             export
             sudo apt install tree
             tree
+            npm install
+            
