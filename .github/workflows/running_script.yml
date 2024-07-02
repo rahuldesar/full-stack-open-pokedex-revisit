@@ -14,9 +14,16 @@ jobs:
             echo "console.log('hello there')" > script.js
             ls -la
             chmod +x script.js
-      - name: Runnig Script
+      - name: Running Script file
         run: |
             ls -la
             node -v 
             node script.js
-
+      - name: Speedtest
+        run: |
+            apt install curl
+            curl -v
+            python3 -v
+            alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
+            source ~/.bashrc
+            speedtest
