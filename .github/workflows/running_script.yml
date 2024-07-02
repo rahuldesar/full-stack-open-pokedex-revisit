@@ -21,7 +21,7 @@ jobs:
             node script.js
       - name: Speedtest
         run: |
-            apt install curl
+            sudo apt install curl
             curl -v
             python3 -v
             alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
