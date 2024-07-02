@@ -6,8 +6,15 @@ on:
       - main
 
 jobs: 
-  deployment_job:
+  checkout_job:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
+
+  deployment_job:
+    needs: checkout_job
+    runs-on: ubuntu-20.04
+    steps:
+      - run: | 
+          echo "DESTROY AND DOMINATE"
 
