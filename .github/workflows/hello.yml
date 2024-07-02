@@ -21,5 +21,6 @@ jobs:
             export
             sudo apt install tree
             tree
-            npm install
-            
+            uname -a
+            # NOTE: this doesn't work before cloning repo, or using predefined checkout action
+            # npm install
