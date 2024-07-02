@@ -19,11 +19,12 @@ jobs:
             ls -la
             node -v 
             node script.js
+  fun_job:
+    runs-on: ubuntu-20.04
+    steps:
       - name: Speedtest
         run: |
             sudo apt install curl
             curl -v
-            python3 -v
-            alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
-            source ~/.bashrc
-            speedtest
+            ls -la ~/
+            speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
