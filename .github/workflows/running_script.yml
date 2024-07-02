@@ -1,0 +1,20 @@
+name: Running Script file in Runner! 
+
+on: 
+  push:
+    branches: 
+      - main
+
+jobs: 
+  hello_world_job:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Saving Script
+        run: |
+            echo "console.log("hello there")" > script.js
+            ls -la
+            chmod +x script.js
+            ls -la
+            node -v 
+            node script.js
+

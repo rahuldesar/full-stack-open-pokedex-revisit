@@ -12,15 +12,15 @@ jobs:
       - name: Say Hello 
         run: |
             echo "Hello World"
-            pwd 
-            whoami
-            df -h
-            du
-            free -h
-            ls -a
-            export
-            sudo apt install tree
-            tree
-            uname -a
+            # pwd 
+            # whoami
+            # df -h
+            # du
+            # free -h
+            # ls -a
+            # export
+            # sudo apt install tree
+            # tree
+            # uname -a
             # NOTE: this doesn't work before cloning repo, or using predefined checkout action
             # npm install
