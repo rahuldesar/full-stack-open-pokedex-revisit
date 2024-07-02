@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Saving Script
         run: |
-            echo "console.log("hello there")" > script.js
+            echo "console.log('hello there')" > script.js
             ls -la
             chmod +x script.js
             ls -la
