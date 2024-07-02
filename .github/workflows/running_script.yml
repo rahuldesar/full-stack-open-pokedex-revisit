@@ -26,6 +26,5 @@ jobs:
         run: |
             sudo apt install curl
             ls -la ~/
-            alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
-            source ~/.bashrc
+            export speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
             speedtest
