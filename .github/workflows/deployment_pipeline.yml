@@ -10,11 +10,21 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: 
+          node-version: '20'
+      - run: |
+          pwd 
+          ls -la
+      - name: Install dependencies
+        run: npm install
+      - name: Linting
+        run: npm run eslint
 
-  deployment_job:
-    needs: checkout_job
-    runs-on: ubuntu-20.04
-    steps:
-      - run: | 
-          echo "DESTROY AND DOMINATE"
-
+  # deployment_job:
+  #   needs: checkout_job
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - run: | 
+  #         echo "DESTROY AND DOMINATE"
+  #
