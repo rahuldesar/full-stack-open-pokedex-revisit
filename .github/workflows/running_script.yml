@@ -6,7 +6,7 @@ on:
       - main
 
 jobs: 
-  hello_world_job:
+  running_script_job:
     runs-on: ubuntu-20.04
     steps:
       - name: Saving Script
@@ -14,6 +14,8 @@ jobs:
             echo "console.log('hello there')" > script.js
             ls -la
             chmod +x script.js
+      - name: Runnig Script
+        run: |
             ls -la
             node -v 
             node script.js
