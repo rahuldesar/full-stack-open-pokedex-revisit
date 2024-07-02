@@ -21,25 +21,27 @@ jobs:
       # - name: Linting
       #   run: npm run eslint
 
-      - name: Test Info
+      - name: Test Success
         uses: rjstone/discord-webhook-notify@v1
+        if: success()
         with:
-            severity: info
-            details: Test succeeded.
-            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-      - name: Test Warn
+          severity: info
+          details: Test Succeeded!
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Test Failure
         uses: rjstone/discord-webhook-notify@v1
+        if: failure()
         with:
-            severity: warn
-            details: Test warning.
-            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-      - name: Test Error
+          severity: error
+          details: Test Failed!
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Test Cancelled
         uses: rjstone/discord-webhook-notify@v1
+        if: cancelled()
         with:
-            severity: error
-            details: Test error.
-            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-
+          severity: warn
+          details: Test Cancelled!
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   # deployment_job:
   #   needs: checkout_job
   #   runs-on: ubuntu-20.04
