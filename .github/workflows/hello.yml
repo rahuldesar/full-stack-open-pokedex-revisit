@@ -12,3 +12,9 @@ jobs:
       - name: Say Hello 
         run: |
             echo "Hello World"
+            pwd 
+            whoami
+            df -h
+            du
+            git status
+            export
