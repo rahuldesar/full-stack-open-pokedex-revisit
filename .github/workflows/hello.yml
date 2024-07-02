@@ -16,5 +16,6 @@ jobs:
             whoami
             df -h
             du
-            git status
+            free -h
+            ls -a
             export
