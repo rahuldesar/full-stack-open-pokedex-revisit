@@ -27,4 +27,4 @@ jobs:
             sudo apt install curl
             curl -v
             ls -la ~/
-            speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
+            curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -
