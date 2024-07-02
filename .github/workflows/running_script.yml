@@ -3,7 +3,7 @@ name: Running Script file in Runner!
 on: 
   push:
     branches: 
-      - main
+      - dev
 
 jobs: 
   running_script_job:

@@ -24,6 +24,7 @@ Workflow
 
 ## TODO
 
+- Artifacts
 -
 
 ```yaml
@@ -42,3 +43,9 @@ jobs:
             echo "hello there"                      //
                                                     // ALSO : usage of secrets here
 ```
+
+[ events ](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows):
+
+- github events
+- cron job
+- external events (Slack, Discord) -- WEBHOOK?????
